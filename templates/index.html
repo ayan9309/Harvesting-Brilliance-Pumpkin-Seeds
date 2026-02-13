@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeedGenomics | Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="left-panel">
+            <div>
+                <div class="logo">
+                    <div class="logo-icon" style="background: #10B981; border: none; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.77 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                       </svg>
+                    </div>
+                    <span style="font-family: 'Inter', sans-serif; letter-spacing: -0.5px;">SeedGenomics</span>
+                </div>
+
+                <div class="hero-content">
+                    <h1>Advanced <br> <span class="highlight">Morphological</span> <br> Analysis</h1>
+                    <p class="description">
+                        Utilizing Random Forest classifiers to distinguish between <strong>Çerçevelik</strong> and <strong>Ürgüp Sivrisi</strong> varieties with precision.
+                    </p>
+                </div>
+            </div>
+
+            <div class="inference-card">
+                <div class="engine-header">
+                    <div class="engine-icon" style="background: #1F2937; border: 1px solid #374151; color: #10B981;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <div class="engine-title">
+                        <h3>Inference Engine</h3>
+                        <p>Ready for Analysis</p>
+                    </div>
+                </div>
+
+                <div class="param-check">
+                    <span class="param-label">Parameter Check</span>
+                    <div class="check-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="visualizer">
+                    <div class="bar" style="height: 30%"></div>
+                    <div class="bar" style="height: 50%"></div>
+                    <div class="bar" style="height: 40%"></div>
+                    <div class="bar" style="height: 70%"></div>
+                    <div class="bar" style="height: 50%"></div>
+                    <div class="bar" style="height: 80%"></div>
+                    <div class="bar" style="height: 60%"></div>
+                    <div class="bar" style="height: 90%"></div>
+                </div>
+
+                <div class="status-row">
+                    <span style="color: #64748B;">STATUS</span>
+                    <span class="status-badge">OPERATIONAL</span>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <h3>98.8%</h3>
+                    <p>Model Accuracy</p>
+                </div>
+                <div class="stat">
+                    <h3>&lt;20ms</h3>
+                    <p>Inference Time</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            
+            <div id="form-container">
+                <div class="form-header">
+                    <h2>Sample Configuration</h2>
+                    <p>Input the geometric properties extracted from your seed sample.</p>
+                </div>
+
+                <form action="/predict" method="POST" class="form-grid" onsubmit="showLoading()">
+                    <div class="input-group">
+                        <label>Area</label>
+                        <input type="number" step="any" name="Area" placeholder="e.g. 56276" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Perimeter</label>
+                        <input type="number" step="any" name="Perimeter" placeholder="e.g. 888.24" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Major Axis</label>
+                        <input type="number" step="any" name="Major_Axis_Length" placeholder="e.g. 326.15" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Solidity</label>
+                        <input type="number" step="any" name="Solidity" placeholder="e.g. 0.99" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Extent</label>
+                        <input type="number" step="any" name="Extent" placeholder="e.g. 0.74" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Roundness</label>
+                        <input type="number" step="any" name="Roundness" placeholder="e.g. 0.89" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Aspect Ratio</label>
+                        <input type="number" step="any" name="Aspect_Ration" placeholder="e.g. 1.48" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Compactness</label>
+                        <input type="number" step="any" name="Compactness" placeholder="e.g. 0.82" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Run Analysis
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </form>
+            </div>
+
+            <div id="loading-screen">
+                <div class="pulse-spinner">
+                    <svg class="pulse-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="loading-title">Processing Geometry</div>
+                <div class="loading-step">Scaling features...</div>
+                <div class="loading-code">MinMaxScaler(feature_range=(0, 1))</div>
+            </div>
+
+            <div style="position: absolute; bottom: 20px; width: 100%; text-align: center; left: 0; font-size: 10px; color: #CBD5E1;">
+                Powered by scikit-learn & Flask Architecture
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLoading() {
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('loading-screen').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
