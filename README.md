@@ -103,4 +103,4 @@ IoT Connectivity: Linking the software with automated sorting machinery for indu
 ## 📝 License
 This project is developed for educational purposes as part of the Artificial Intelligence Internship Program.
 
-Developed by Mohamadayan Desai
+**Developed by Mohamadayan Desai**
