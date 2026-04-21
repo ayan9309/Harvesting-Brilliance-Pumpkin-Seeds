@@ -35,7 +35,7 @@ Moving beyond traditional manual inspection, this project leverages machine lear
 
 Ensure your project folder matches this structure exactly:
 
-```text
+'''text
 SeedGenomics/
 │
 ├── static/
@@ -51,14 +51,15 @@ SeedGenomics/
 ├── model.pkl                  # Trained Random Forest Model (Auto-generated)
 ├── scaler.pkl                 # Feature Scaler (Auto-generated)
 ├── Pumpkin_Seeds_Dataset.xlsx # Raw Dataset Source
-└── README.md                  # Project Documentation
+└── README.md                  # Project Documentation'''
 
 ⚙️ Installation & Setup
 1. Prerequisites
 Ensure you have Python installed. You will also need the following libraries:
 
-Bash
-pip install flask scikit-learn pandas numpy openpyxl
+'''Bash
+pip install flask scikit-learn pandas numpy openpyxl'''
+
 2. Train the Model
 Before running the app, you must generate the trained model file.
 
@@ -71,8 +72,9 @@ Verify that model.pkl and scaler.pkl have appeared in your project folder.
 3. Run the Application
 Open your terminal in the project folder and run:
 
-Bash
-python app.py
+'''Bash
+python app.py'''
+
 4. Access the Interface
 Open your web browser and navigate to the local server address shown in the terminal (usually):
 http://127.0.0.1:5000/
