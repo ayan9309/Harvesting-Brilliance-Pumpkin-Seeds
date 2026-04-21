@@ -52,13 +52,15 @@ SeedGenomics/
 ├── scaler.pkl                 # Feature Scaler (Auto-generated)
 ├── Pumpkin_Seeds_Dataset.xlsx # Raw Dataset Source
 └── README.md                  # Project Documentation
+```
 
 ⚙️ Installation & Setup
 1. Prerequisites
 Ensure you have Python installed. You will also need the following libraries:
 
 ```Bash
-pip install flask scikit-learn pandas numpy openpyxl```
+pip install flask scikit-learn pandas numpy openpyxl
+```
 
 2. Train the Model
 Before running the app, you must generate the trained model file.
