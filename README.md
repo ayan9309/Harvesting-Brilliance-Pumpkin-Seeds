@@ -83,22 +83,22 @@ Open your web browser and navigate to the local server address shown in the term
 http://127.0.0.1:5000/
 
 ## 🧠 How It Works
-Data Input: The user enters geometric values (e.g., Area: 56276, Perimeter: 888.24) into the web form.
+**Data Input:** The user enters geometric values (e.g., Area: 56276, Perimeter: 888.24) into the web form.
 
-Preprocessing: The backend loads the saved MinMaxScaler (scaler.pkl) to normalize the inputs to the same scale used during training.
+**Preprocessing:** The backend loads the saved MinMaxScaler (scaler.pkl) to normalize the inputs to the same scale used during training.
 
-Inference: The data is passed to the Random Forest model (model.pkl), which predicts the class (0 for Çerçevelik, 1 for Ürgüp Sivrisi).
+**Inference:** The data is passed to the Random Forest model (model.pkl), which predicts the class (0 for Çerçevelik, 1 for Ürgüp Sivrisi).
 
-Visualization: The frontend triggers a "Processing Geometry" animation state while the server computes the result.
+**Visualization:** The frontend triggers a "Processing Geometry" animation state while the server computes the result.
 
-Result: The final classification is displayed on a clean result card with a confidence summary.
+**Result:** The final classification is displayed on a clean result card with a confidence summary.
 
 ## 🔮 Future Scope
-Computer Vision Integration: Implementing CNNs to allow users to upload images of seeds for automatic feature extraction.
+**Computer Vision Integration:** Implementing CNNs to allow users to upload images of seeds for automatic feature extraction.
 
-Mobile Application: Developing a React Native version for on-field usage by farmers.
+**Mobile Application:** Developing a React Native version for on-field usage by farmers.
 
-IoT Connectivity: Linking the software with automated sorting machinery for industrial applications.
+**IoT Connectivity:** Linking the software with automated sorting machinery for industrial applications.
 
 ## 📝 License
 This project is developed for educational purposes as part of the Artificial Intelligence Internship Program.
