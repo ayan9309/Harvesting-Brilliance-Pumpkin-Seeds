@@ -35,7 +35,7 @@ Moving beyond traditional manual inspection, this project leverages machine lear
 
 Ensure your project folder matches this structure exactly:
 
-'''text
+```text
 SeedGenomics/
 │
 ├── static/
@@ -51,7 +51,7 @@ SeedGenomics/
 ├── model.pkl                  # Trained Random Forest Model (Auto-generated)
 ├── scaler.pkl                 # Feature Scaler (Auto-generated)
 ├── Pumpkin_Seeds_Dataset.xlsx # Raw Dataset Source
-└── README.md                  # Project Documentation'''
+└── README.md                  # Project Documentation```
 
 ⚙️ Installation & Setup
 1. Prerequisites
