@@ -54,7 +54,7 @@ SeedGenomics/
 └── README.md                  # Project Documentation
 ```
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 1. Prerequisites
 Ensure you have Python installed. You will also need the following libraries:
 
@@ -62,7 +62,7 @@ Ensure you have Python installed. You will also need the following libraries:
 pip install flask scikit-learn pandas numpy openpyxl
 ```
 
-2. Train the Model
+## 2. Train the Model
 Before running the app, you must generate the trained model file.
 
 Open model_building.ipynb in VS Code or Jupyter.
@@ -71,17 +71,18 @@ Run all cells to process the dataset and train the Random Forest.
 
 Verify that model.pkl and scaler.pkl have appeared in your project folder.
 
-3. Run the Application
+## 3. Run the Application
 Open your terminal in the project folder and run:
 
-'''Bash
-python app.py'''
+```Bash
+python app.py
+```
 
-4. Access the Interface
+## 4. Access the Interface
 Open your web browser and navigate to the local server address shown in the terminal (usually):
 http://127.0.0.1:5000/
 
-🧠 How It Works
+## 🧠 How It Works
 Data Input: The user enters geometric values (e.g., Area: 56276, Perimeter: 888.24) into the web form.
 
 Preprocessing: The backend loads the saved MinMaxScaler (scaler.pkl) to normalize the inputs to the same scale used during training.
@@ -92,14 +93,14 @@ Visualization: The frontend triggers a "Processing Geometry" animation state whi
 
 Result: The final classification is displayed on a clean result card with a confidence summary.
 
-🔮 Future Scope
+## 🔮 Future Scope
 Computer Vision Integration: Implementing CNNs to allow users to upload images of seeds for automatic feature extraction.
 
 Mobile Application: Developing a React Native version for on-field usage by farmers.
 
 IoT Connectivity: Linking the software with automated sorting machinery for industrial applications.
 
-📝 License
+## 📝 License
 This project is developed for educational purposes as part of the Artificial Intelligence Internship Program.
 
 Developed by Mohamadayan Desai
